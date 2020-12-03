@@ -17,19 +17,19 @@ if __name__ == '__main__':
             PhoneCallID = IYS.select("#", "#", "IysTransferred = 0 and IsErrored = 0 limit 1",conn)
             iys("#", "#").transfer(HeaderAuth)
             counter += 1
-            print("Phone - Counter :{}".format(counter))
+            print("Counter :{}".format(counter))
         elif SMSCount > 0:
             HeaderAuth = iys("#2", "#").auth()
             SMSID = IYS.select("#", "#", "IysTransferred = 0 and IsErrored = 0 limit 1", conn)
             iys("#", "#").transfer(HeaderAuth)
             counter += 1
-            print("SMS - Counter :{}".format(counter))
+            print("Counter :{}".format(counter))
         elif MailingCount > 0:
             HeaderAuth = iys("#", "#").auth()
             MailingID = IYS.select("#", "#", "IysTransferred = 0 and IsErrored = 0 limit 1", conn)
             iys("#", "#").transfer(HeaderAuth)
             counter += 1
-            print("Mail - Counter :{}".format(counter))
+            print("Counter :{}".format(counter))
         else:
             print("No Update Needed")
             break
